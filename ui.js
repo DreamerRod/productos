@@ -5,13 +5,14 @@ class Ui {
         this.uiDescription = document.getElementById("description");
         this.uiQuantity = document.getElementById("quantity");
         this.uiForm = document.getElementById("form-data");
-        this.container = document.getElementById("container-table");
+        //this.container = document.getElementById("container-table");
         //this.manager =  new ProductsManagement();
         this.uiName1 = document.getElementById("namep");
         this.uiName2 = document.getElementById("namepa");
         this.uiForm2 = document.getElementById("form-data2");
         this.uiName3 = document.getElementById("namere");
         this.uiForm3 = document.getElementById("form-data3");
+        this.container = document.getElementById("container-table");
         this.manager =  new ProductsManagement();
         let p1 = new Products("Pollo", "Pollo Sofia", 20);
         let p2 = new Products("Galletas", "Galleras Mabel", 50);
@@ -46,8 +47,11 @@ class Ui {
     }
     clearForm() {
                 this.uiName.value = "";
-                this.uiDescription.value = ""
-                this.uiQuantity.value = ""
+                this.uiDescription.value = "";
+                this.uiQuantity.value = "";
+                this.uiName1.value="";
+                this.uiName2.value="";
+                this.uiName3.value="";
     }
     loadTable() {
         var html = "";
@@ -67,6 +71,17 @@ class Ui {
         this.manager.addProducts(p1);
         this.loadTable();
 
+    }
+    updateProducts(nombrea,nombren ){
+        let p1 = new Products(name, description, quantity);
+        let p3 = new Products(name, description, quantity);
+        manager.updateProducts(p1, p3);
+        this.loadTable();
+    }
+    updateProducts(nombrea,nombren ){
+        let p2 = new Products(name, description, quantity);
+        manager.removeProducts(p2);
+        this.loadTable();
     }
 }
 let ui = new Ui();

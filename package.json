@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Sistema de gestion de productos",
   "main": "index.js",
-  "type":"module",
+  "type": "module",
   "scripts": {
     "test": "node index.js"
   },
