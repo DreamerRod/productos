@@ -78,7 +78,7 @@ class Ui {
         manager.updateProducts(p1, p3);
         this.loadTable();
     }
-    updateProducts(nombrea,nombren ){
+    updateProducts(nombrea){
         let p2 = new Products(name, description, quantity);
         manager.removeProducts(p2);
         this.loadTable();
